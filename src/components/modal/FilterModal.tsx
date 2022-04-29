@@ -6,12 +6,10 @@ import { Character } from "../../types";
 
 export default function FilterModal({
   setShowFilter,
-  setCharacters,
   filterName,
   setFilterName,
 }: {
   setShowFilter: Dispatch<SetStateAction<boolean>>;
-  setCharacters: Dispatch<SetStateAction<Character[]>>;
   filterName: string;
   setFilterName: Dispatch<SetStateAction<string>>;
 }) {
@@ -21,14 +19,14 @@ export default function FilterModal({
       filterName: filterName,
     },
   });
-
+  /* 
   useEffect(() => {
     if (data?.characters) {
       setCharacters([]);
       setCharacters((prevData) => [...prevData, ...data?.characters.results]);
     }
   }, [data?.characters]);
-
+ */
   return (
     <div className="fixed top-0 left-0 z-10 flex items-center justify-center w-screen h-screen bg-slate-400/50">
       <div className="flex flex-col h-40 gap-2 pt-4 bg-white shadow-xl w-96 rounded-xl">
